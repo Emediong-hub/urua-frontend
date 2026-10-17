@@ -1,0 +1,107 @@
+.nav {
+  align-items: center;
+}
+
+.hello {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+  background: var(--gold-light);
+  min-height: calc(100vh - 75px);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-card h2 {
+  color: var(--green);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.field input:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--gold);
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c2be;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.switch {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.switch a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.role-choice {
+  display: flex;
+  gap: 8px;
+}
+
+.role {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.role.active {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}

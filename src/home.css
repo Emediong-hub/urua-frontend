@@ -1,0 +1,240 @@
+.landing-hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(194, 142, 43, 0.35), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.08), transparent 40%),
+    linear-gradient(135deg, var(--green-dark), var(--green) 55%, #17573c);
+  color: #fff;
+  padding: 64px 0 72px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(194, 142, 43, 0.7);
+  color: var(--gold-light);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.landing-hero h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.landing-hero .lead {
+  color: var(--gold-light);
+  max-width: 600px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+}
+
+.hero-search {
+  display: flex;
+  max-width: 620px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: transparent;
+  color: var(--text);
+}
+
+.hero-search button {
+  border-radius: 999px;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--green-dark);
+  padding: 10px 24px;
+}
+
+.hero-search button:hover {
+  background: #d9a23a;
+  border-color: #d9a23a;
+}
+
+.trust {
+  background: var(--gold-light);
+  border-bottom: 1px solid #ead9b0;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+.trust-item strong {
+  display: block;
+  color: var(--green);
+  font-size: 0.95rem;
+}
+
+.trust-item span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.section {
+  padding-top: 40px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  color: var(--green);
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.category-tile:hover {
+  border-color: var(--gold);
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.category-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.sell-cta {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(194, 142, 43, 0.4), transparent 45%),
+    var(--green);
+  color: #fff;
+  border-radius: 16px;
+  padding: 36px 24px;
+  text-align: center;
+  margin: 44px 0 40px;
+}
+
+.sell-cta h2 {
+  margin-bottom: 8px;
+}
+
+.sell-cta p {
+  color: var(--gold-light);
+  max-width: 480px;
+  margin: 0 auto 20px;
+}
+
+.sell-cta .btn {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--green-dark);
+}
+
+.sell-cta .btn:hover {
+  background: #d9a23a;
+  border-color: #d9a23a;
+}
+
+.cat-badge {
+  display: inline-block;
+  background: var(--gold-light);
+  color: #8a5a00;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.page-end {
+  height: 40px;
+}
+
+.category-grid {
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+}
+
+.category-tile {
+  gap: 4px;
+  padding: 10px 6px;
+  font-size: 0.85rem;
+}
+
+.category-icon {
+  font-size: 1.1rem;
+}

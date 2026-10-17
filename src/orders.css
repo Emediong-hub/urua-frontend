@@ -1,0 +1,78 @@
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.order-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.order-id {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-address {
+  background: var(--gold-light);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+.order-address-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-pending_payment {
+  background: #fff3cd;
+  color: #8a6d00;
+}
+
+.badge-paid {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-shipped {
+  background: var(--gold-light);
+  color: #8a5a00;
+}
+
+.badge-delivered {
+  background: #e7f4ec;
+  color: var(--green);
+}
+
+.badge-cancelled {
+  background: #fdecea;
+  color: #b3261e;
+}

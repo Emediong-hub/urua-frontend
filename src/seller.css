@@ -1,0 +1,47 @@
+.nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.auth-card.wide {
+  max-width: 560px;
+}
+
+.field textarea,
+.field select {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.field textarea:focus,
+.field select:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--gold);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .field {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.page-head .page-title {
+  margin-bottom: 0;
+}
