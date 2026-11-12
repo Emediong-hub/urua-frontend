@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../auth-context'
+import ResendVerification from '../components/ResendVerification'
 
 function Register() {
   const { register } = useAuth()
-  const navigate = useNavigate()
   const [form, setForm] = useState({
     fullName: '',
     email: '',
@@ -14,6 +14,7 @@ function Register() {
   })
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [sentTo, setSentTo] = useState('')
 
   function update(field, value) {
     setForm({ ...form, [field]: value })
@@ -25,12 +26,33 @@ function Register() {
     setLoading(true)
     try {
       await register(form)
-      navigate('/')
+      setSentTo(form.email.trim().toLowerCase())
     } catch (err) {
       setError(err.message)
     } finally {
       setLoading(false)
     }
+  }
+
+  if (sentTo) {
+    return (
+      <div className="auth-page">
+        <div className="auth-card">
+          <h2>Check your email</h2>
+          <p>
+            We sent a verification link to <strong>{sentTo}</strong>. Click it to
+            activate your account. The link expires in 24 hours.
+          </p>
+          <p className="muted small">
+            Can't find it? Look in your spam folder, or request a new one below.
+          </p>
+          <ResendVerification email={sentTo} />
+          <p className="switch">
+            Already verified? <Link to="/login">Login</Link>
+          </p>
+        </div>
+      </div>
+    )
   }
 
   return (

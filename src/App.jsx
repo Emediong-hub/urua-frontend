@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail'
 import Products from './pages/Products'
 import Register from './pages/Register'
 import SellerOrders from './pages/SellerOrders'
+import VerifyEmail from './pages/VerifyEmail'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/verify-email" element={<VerifyEmail />} />
         <Route
           path="/cart"
           element={

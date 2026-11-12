@@ -22,9 +22,19 @@ export function AuthProvider({ children }) {
     return data.user
   }
 
+  // The account is created, but it can't log in until the emailed link is clicked
   async function register(form) {
-    await api('/auth/register', { method: 'POST', body: form })
-    return login(form.email, form.password)
+    try {
+      await api('/auth/register', { method: 'POST', body: form })
+    } catch (err) {
+      if (err.status === 409) {
+        throw new Error(
+          'That email is already registered. Try logging in, or use a different email.',
+          { cause: err }
+        )
+      }
+      throw err
+    }
   }
 
   function logout() {
